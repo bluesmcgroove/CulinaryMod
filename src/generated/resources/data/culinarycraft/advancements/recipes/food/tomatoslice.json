@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "culinarycraft:tomatoslice"
+    ]
+  },
+  "criteria": {
+    "ironknife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "culinarycraft:ironknife"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "culinarycraft:tomatoslice"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ironknife",
+      "has_the_recipe"
+    ]
+  ]
+}
