@@ -24,10 +24,16 @@ public class IronKnife extends SwordItem {
     }
 
     @Override
+    public int getMaxDamage(ItemStack stack) {
+        return 320;
+    }
+
+    @Override
     public ItemStack getContainerItem(ItemStack itemStack) {
         final ItemStack damagedStack = itemStack.copy();
         if(damagedStack.hurt(1, null, null)) {
             damagedStack.setDamageValue(0);
+            damagedStack.shrink(1);
         }
         return damagedStack;
 

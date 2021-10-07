@@ -47,7 +47,7 @@ public class CulinaryCraft
 
     private void enqueueIMC(final InterModEnqueueEvent event)    {
         // some example code to dispatch IMC to another mod
-        InterModComms.sendTo("culinarycraft", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
+        //InterModComms.sendTo("culinarycraft", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
     }
 
     private void processIMC(final InterModProcessEvent event)    {
@@ -60,7 +60,7 @@ public class CulinaryCraft
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
         // do something when the server starts
-        LOGGER.info("HELLO from server starting");
+        //LOGGER.info("HELLO from server starting");
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
@@ -70,7 +70,7 @@ public class CulinaryCraft
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here
-            LOGGER.info("HELLO from Register Block");
+            //LOGGER.info("HELLO from Register Block");
         }
     }
 }

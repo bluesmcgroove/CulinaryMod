@@ -15,17 +15,12 @@ public class Items extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-//        singleTexture(
-//                Registration.IRONKNIFE.get().getRegistryName().getPath(),
-//                new ResourceLocation("item/handheld"),
-//                "layer0",
-//                new ResourceLocation(CulinaryCraft.MODID, "item/ironknife"));
         getBuilder(Registration.IRONKNIFE.get().getRegistryName().getPath())
                 .parent(getExistingFile(mcLoc("item/handheld")))
                 .texture("layer0", "item/ironknife");
-//        getBuilder(Registration.TOMATOFRUIT.get().getRegistryName().getPath())
-//                .parent(getExistingFile(mcLoc("item/handhled")))
-//                .texture("layer0", "item/tomatofruit");
+        getBuilder(Registration.TOMATOFRUIT.get().getRegistryName().getPath())
+                .parent(getExistingFile(mcLoc("item/generated")))
+                .texture("layer0", "item/tomatofruit");
 //        getBuilder(Registration.TOMATOSLICE.get().getRegistryName().getPath())
 //                .parent(getExistingFile(mcLoc("item/handheld")))
 //                .texture("layer0", "item/tomatoslice");
