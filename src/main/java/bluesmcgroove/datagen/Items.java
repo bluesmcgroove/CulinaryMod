@@ -1,9 +1,8 @@
-package com.bluesmcgroove.datagen;
+package bluesmcgroove.datagen;
 
-import com.bluesmcgroove.culinarycraft.CulinaryCraft;
-import com.bluesmcgroove.setup.Registration;
+import bluesmcgroove.culinarycraft.CulinaryCraft;
+import bluesmcgroove.setup.Registration;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 

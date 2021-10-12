@@ -1,4 +1,4 @@
-package com.bluesmcgroove.datagen;
+package bluesmcgroove.datagen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

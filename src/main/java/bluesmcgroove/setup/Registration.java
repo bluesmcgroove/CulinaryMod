@@ -1,8 +1,8 @@
-package com.bluesmcgroove.setup;
+package bluesmcgroove.setup;
 
-import com.bluesmcgroove.items.IronKnife;
-import com.bluesmcgroove.items.TomatoFruit;
-import com.bluesmcgroove.items.TomatoSlice;
+import bluesmcgroove.item.IronKnife;
+import bluesmcgroove.item.TomatoFruit;
+import bluesmcgroove.item.TomatoSlice;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -10,7 +10,7 @@ import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static com.bluesmcgroove.culinarycraft.CulinaryCraft.MODID;
+import static bluesmcgroove.culinarycraft.CulinaryCraft.MODID;
 
 public class Registration {
 
@@ -31,6 +31,6 @@ public class Registration {
 
     public static final RegistryObject<Item> IRONKNIFE = ITEMS.register("ironknife", () -> new IronKnife(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
 
-    public static final RegistryObject<Item> TOMATOFRUIT = ITEMS.register("tomatofruit", () -> new TomatoFruit(new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
-    public static final RegistryObject<Item> TOMATOSLICE = ITEMS.register("tomatoslice", () -> new TomatoSlice(new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
+    public static final RegistryObject<Item> TOMATOFRUIT = ITEMS.register("tomatofruit", () -> new TomatoFruit(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(CulinaryRegistry.TOMATOFRUIT)));
+    public static final RegistryObject<Item> TOMATOSLICE = ITEMS.register("tomatoslice", () -> new TomatoSlice(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(CulinaryRegistry.TOMATOFRUIT)));
 }

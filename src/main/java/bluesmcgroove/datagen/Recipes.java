@@ -1,9 +1,6 @@
-package com.bluesmcgroove.datagen;
+package bluesmcgroove.datagen;
 
-import com.bluesmcgroove.culinarycraft.CulinaryCraft;
-import com.bluesmcgroove.items.IronKnife;
-import com.bluesmcgroove.items.TomatoFruit;
-import com.bluesmcgroove.setup.Registration;
+import bluesmcgroove.setup.Registration;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.Items;

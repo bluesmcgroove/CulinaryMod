@@ -1,4 +1,4 @@
-package com.bluesmcgroove.items;
+package bluesmcgroove.item;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -10,14 +10,14 @@ import net.minecraft.world.level.Level;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class TomatoFruit extends Item {
-    public TomatoFruit(Properties properties) {
+public class TomatoSlice extends Item {
+    public TomatoSlice(Properties properties) {
         super(properties);
     }
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> list, TooltipFlag flags) {
         super.appendHoverText(stack, level, list, flags);
-        list.add(new TranslatableComponent("message.tomatofruit"));
+        list.add(new TranslatableComponent("message.tomatoslice"));
     }
 }
