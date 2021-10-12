@@ -17,9 +17,9 @@ public class Items extends ItemModelProvider {
         getBuilder(Registration.IRONKNIFE.get().getRegistryName().getPath())
                 .parent(getExistingFile(mcLoc("item/handheld")))
                 .texture("layer0", "item/ironknife");
-        getBuilder(Registration.TOMATOFRUIT.get().getRegistryName().getPath())
-                .parent(getExistingFile(mcLoc("item/generated")))
-                .texture("layer0", "item/tomatofruit");
+//        getBuilder(Registration.TOMATOFRUIT.get().getRegistryName().getPath())
+//                .parent(getExistingFile(mcLoc("item/generated")))
+//                .texture("layer0", "item/tomatofruit");
 //        getBuilder(Registration.TOMATOSLICE.get().getRegistryName().getPath())
 //                .parent(getExistingFile(mcLoc("item/handheld")))
 //                .texture("layer0", "item/tomatoslice");

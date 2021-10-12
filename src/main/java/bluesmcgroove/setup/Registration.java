@@ -1,8 +1,6 @@
 package bluesmcgroove.setup;
 
 import bluesmcgroove.item.IronKnife;
-import bluesmcgroove.item.TomatoFruit;
-import bluesmcgroove.item.TomatoSlice;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -31,6 +29,6 @@ public class Registration {
 
     public static final RegistryObject<Item> IRONKNIFE = ITEMS.register("ironknife", () -> new IronKnife(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
 
-    public static final RegistryObject<Item> TOMATOFRUIT = ITEMS.register("tomatofruit", () -> new TomatoFruit(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(CulinaryRegistry.TOMATOFRUIT)));
-    public static final RegistryObject<Item> TOMATOSLICE = ITEMS.register("tomatoslice", () -> new TomatoSlice(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(CulinaryRegistry.TOMATOFRUIT)));
+    public static final RegistryObject<Item> TOMATOFRUIT = ITEMS.register("tomatofruit", () -> new CulinaryRegistry(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(CulinaryRegistry.TOMATOFRUIT)));
+    public static final RegistryObject<Item> TOMATOSLICE = ITEMS.register("tomatoslice", () -> new CulinaryRegistry(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(CulinaryRegistry.TOMATOSLICE)));
 }
