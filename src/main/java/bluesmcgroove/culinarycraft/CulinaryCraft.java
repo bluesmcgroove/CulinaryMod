@@ -1,7 +1,10 @@
 package bluesmcgroove.culinarycraft;
 
 import bluesmcgroove.setup.Registration;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -50,9 +53,9 @@ public class CulinaryCraft
 
     private void processIMC(final InterModProcessEvent event)    {
         // some example code to receive and process InterModComms from other mods
-        LOGGER.info("Got IMC {}", event.getIMCStream().
-                map(m->m.messageSupplier().get()).
-                collect(Collectors.toList()));
+//        LOGGER.info("Got IMC {}", event.getIMCStream().
+//                map(m->m.messageSupplier().get()).
+//                collect(Collectors.toList()));
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
@@ -68,6 +71,7 @@ public class CulinaryCraft
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here
+            //ModelLoader.addSpecialModel(new ResourceLocation(MODID, "butcherblock"));
             //LOGGER.info("HELLO from Register Block");
         }
     }
