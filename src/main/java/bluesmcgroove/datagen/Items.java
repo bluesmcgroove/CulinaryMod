@@ -1,6 +1,6 @@
 package bluesmcgroove.datagen;
 
-import bluesmcgroove.culinarycraft.CulinaryCraft;
+import bluesmcgroove.culinarymod.CulinaryMod;
 import bluesmcgroove.setup.Registration;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -9,7 +9,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 public class Items extends ItemModelProvider {
 
     public Items(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, CulinaryCraft.MODID, existingFileHelper);
+        super(generator, CulinaryMod.MODID, existingFileHelper);
     }
 
     @Override

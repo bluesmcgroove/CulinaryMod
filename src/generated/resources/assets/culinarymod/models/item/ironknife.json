@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "culinarycraft:item/ironknife"
+    "layer0": "culinarymod:item/ironknife"
   }
 }
