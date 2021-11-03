@@ -1,10 +1,7 @@
-package bluesmcgroove.culinarycraft;
+package bluesmcgroove.culinarymod;
 
 import bluesmcgroove.setup.Registration;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,17 +15,15 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.stream.Collectors;
-
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(CulinaryCraft.MODID)
-public class CulinaryCraft
+@Mod(CulinaryMod.MODID)
+public class CulinaryMod
 {
-    public static final String MODID = "culinarycraft";
+    public static final String MODID = "culinarymod";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public CulinaryCraft() {
+    public CulinaryMod() {
         Registration.init();
 
         // Register the setup method for modloading
@@ -48,7 +43,7 @@ public class CulinaryCraft
 
     private void enqueueIMC(final InterModEnqueueEvent event)    {
         // some example code to dispatch IMC to another mod
-        //InterModComms.sendTo("culinarycraft", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
+        //InterModComms.sendTo("culinarymod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
     }
 
     private void processIMC(final InterModProcessEvent event)    {

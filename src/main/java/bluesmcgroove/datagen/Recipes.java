@@ -26,11 +26,11 @@ public class Recipes extends RecipeProvider {
                 .pattern("s")
                 .define('x', Tags.Items.INGOTS_IRON)
                 .define('s', Items.STICK)
-                .group("culinarycraft")
+                .group("culinarymod")
                 .unlockedBy("iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STICK))
                 .save(consumer);
         ShapelessRecipeBuilder.shapeless(Registration.TOMATOSLICE.get())
-                .group("culinarycraft")
+                .group("culinarymod")
                 .requires(Registration.IRONKNIFE.get())
                 .requires(Registration.TOMATOFRUIT.get())
                 .unlockedBy("ironknife", InventoryChangeTrigger.TriggerInstance.hasItems(Registration.IRONKNIFE.get()))

@@ -1,0 +1,12 @@
+{
+  "item.culinarymod.ironknife": "Iron Knife",
+  "item.culinarymod.tomatofruit": "Tomato",
+  "item.culinarymod.tomatoslice": "Sliced tomato",
+  "block.culinarymod.butcherblock": "Butcher Block",
+
+  "message.ironknife": "An iron knife for cooking",
+  "message.tomatoslice": "Sliced juicy tomato",
+  "message.tomatofruit": "A juicy tomato",
+  "message.butcherblock": "A butcher's block"
+
+}

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "culinarycraft:tomatoslice"
+      "culinarymod:tomatoslice"
     ]
   },
   "criteria": {
@@ -12,7 +12,7 @@
         "items": [
           {
             "items": [
-              "culinarycraft:ironknife"
+              "culinarymod:ironknife"
             ]
           }
         ]
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "culinarycraft:tomatoslice"
+        "recipe": "culinarymod:tomatoslice"
       }
     }
   },

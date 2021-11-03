@@ -4,8 +4,8 @@
 	"ambientocclusion": false,
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "culinarycraft:block/butcherblock",
-		"particle": "culinarycraft:block/butcherblock"
+		"0": "culinarymod:block/butcherblock",
+		"particle": "culinarymod:block/butcherblock"
 	},
 	"elements": [
 		{
