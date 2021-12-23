@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static bluesmcgroove.culinarymod.CulinaryMod.MODID;
+import static bluesmcgroove.CulinaryMod.MODID;
 
 public class Registration {
 

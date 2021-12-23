@@ -1,5 +1,6 @@
-package bluesmcgroove.culinarymod;
+package bluesmcgroove;
 
+import bluesmcgroove.setup.ModSetup;
 import bluesmcgroove.setup.Registration;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
@@ -29,6 +30,7 @@ public class CulinaryMod
         // Register the setup method for modloading
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(this::setup);
+        bus.addListener(ModSetup::init);
         // Register the enqueueIMC method for modloading
         bus.addListener(this::enqueueIMC);
         // Register the processIMC method for modloading

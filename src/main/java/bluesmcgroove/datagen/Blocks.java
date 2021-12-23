@@ -1,6 +1,6 @@
 package bluesmcgroove.datagen;
 
-import bluesmcgroove.culinarymod.CulinaryMod;
+import bluesmcgroove.CulinaryMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;

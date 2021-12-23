@@ -1,9 +1,5 @@
 package bluesmcgroove.block;
 
-// Made with Blockbench 4.0.1
-// Exported for Minecraft version 1.17 with Mojang mappings
-// Paste this class into your mod and generate all required imports
-
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
