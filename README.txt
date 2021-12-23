@@ -1,4 +1,4 @@
-This is a work in progress mod for Minecraft using Forge 1.17.1.
+This is a work in progress mod for Minecraft using Forge 1.18.1.
 
 This may or may not ever become a complete mod.
 
