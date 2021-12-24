@@ -31,9 +31,9 @@ public class Registration {
     }
 
     public static final RegistryObject<Block> BUTCHERBLOCK = BLOCKS.register("butcherblock", ButcherBlock::new);
-    public static final RegistryObject<Item> BUTCHERBLOCK_ITEM = ITEMS.register("butcherblock", () -> new BlockItem(BUTCHERBLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-    public static final RegistryObject<Item> IRONKNIFE = ITEMS.register("ironknife", () -> new IronKnife(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
+    public static final RegistryObject<Item> BUTCHERBLOCK_ITEM = ITEMS.register("butcherblock", () -> new BlockItem(BUTCHERBLOCK.get(), new Item.Properties().tab(ModSetup.ITEM_GROUP)));
+    public static final RegistryObject<Item> IRONKNIFE = ITEMS.register("ironknife", () -> new IronKnife(new Item.Properties().tab(ModSetup.ITEM_GROUP)));
 
-    public static final RegistryObject<Item> TOMATOFRUIT = ITEMS.register("tomatofruit", () -> new CulinaryRegistry(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(CulinaryRegistry.TOMATOFRUIT)));
-    public static final RegistryObject<Item> TOMATOSLICE = ITEMS.register("tomatoslice", () -> new CulinaryRegistry(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(CulinaryRegistry.TOMATOSLICE)));
+    public static final RegistryObject<Item> TOMATOFRUIT = ITEMS.register("tomatofruit", () -> new CulinaryRegistry(new Item.Properties().tab(ModSetup.ITEM_GROUP).food(CulinaryRegistry.TOMATOFRUIT)));
+    public static final RegistryObject<Item> TOMATOSLICE = ITEMS.register("tomatoslice", () -> new CulinaryRegistry(new Item.Properties().tab(ModSetup.ITEM_GROUP).food(CulinaryRegistry.TOMATOSLICE)));
 }
