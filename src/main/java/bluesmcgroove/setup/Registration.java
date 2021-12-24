@@ -3,7 +3,6 @@ package bluesmcgroove.setup;
 import bluesmcgroove.block.ButcherBlock;
 import bluesmcgroove.item.IronKnife;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -11,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static bluesmcgroove.CulinaryMod.MODID;
+import static bluesmcgroove.LCB.MODID;
 
 public class Registration {
 

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "culinarymod:item/tomatofruit"
+    "layer0": "lcb:item/tomatofruit"
   }
 }

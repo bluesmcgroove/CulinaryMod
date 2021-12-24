@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "culinarymod:tomatoslice"
+      "lcb:ironknife"
     ]
   },
   "criteria": {
-    "ironknife": {
+    "iron": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "culinarymod:ironknife"
+              "minecraft:stick"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "culinarymod:tomatoslice"
+        "recipe": "lcb:ironknife"
       }
     }
   },
   "requirements": [
     [
-      "ironknife",
+      "iron",
       "has_the_recipe"
     ]
   ]

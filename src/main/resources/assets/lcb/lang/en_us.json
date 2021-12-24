@@ -1,0 +1,13 @@
+{
+  "item.lcb.ironknife": "Iron Knife",
+  "item.lcb.tomatofruit": "Tomato",
+  "item.lcb.tomatoslice": "Sliced tomato",
+  "block.lcb.butcherblock": "Butcher Block",
+
+  "message.ironknife": "An iron knife for cooking",
+  "message.tomatoslice": "Sliced juicy tomato",
+  "message.tomatofruit": "A juicy tomato",
+  "message.butcherblock": "A butcher's block",
+  "itemGroup.lcb": "Le Cordon Blues"
+
+}

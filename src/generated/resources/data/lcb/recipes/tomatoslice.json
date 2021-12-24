@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "lcb",
+  "ingredients": [
+    {
+      "item": "lcb:ironknife"
+    },
+    {
+      "item": "lcb:tomatofruit"
+    }
+  ],
+  "result": {
+    "item": "lcb:tomatoslice"
+  }
+}

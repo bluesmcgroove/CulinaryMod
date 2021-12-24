@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=east": {
+			"model":  "lcb:block/butcherblock",
+		    "y": 90
+            },
+		"facing=north": {
+			"model":  "lcb:block/butcherblock"
+		},
+		"facing=south": {
+			"model":  "lcb:block/butcherblock",
+			"y": 180
+		},
+		"facing=west": {
+			"model":  "lcb:block/butcherblock",
+			"y": 270
+		}
+	}
+}
