@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "lcb",
+  "group": "culinarymod",
   "pattern": [
     "x",
     "s"

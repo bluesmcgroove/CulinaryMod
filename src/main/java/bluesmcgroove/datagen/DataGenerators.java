@@ -1,7 +1,7 @@
 package bluesmcgroove.datagen;
 
 import bluesmcgroove.LCB;
-import bluesmcgroove.setup.LCBBlockTags;
+import bluesmcgroove.util.LCBBlockTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -16,8 +16,8 @@ public class DataGenerators {
 
         if (event.includeServer()) {
             generator.addProvider(new Recipes(generator));
-            LCBBlockTags LCBBlockTags = new LCBBlockTags(generator, event.getExistingFileHelper());
-            generator.addProvider(LCBBlockTags);
+            generator.addProvider(new LootTables(generator));
+            generator.addProvider(new LCBBlockTags(generator, event.getExistingFileHelper()));
         }
 
         if (event.includeClient()) {

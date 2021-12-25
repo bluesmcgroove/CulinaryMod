@@ -1,13 +1,16 @@
 package bluesmcgroove.setup;
 
-import bluesmcgroove.LCB;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.fml.common.Mod;
+import bluesmcgroove.block.entity.container.ButcherBlockScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
-@Mod.EventBusSubscriber(modid = LCB.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ClientSetup {
-    public static void init(final FMLClientSetupEvent event) {
 
+    public static void setup(final FMLClientSetupEvent event) {
+
+        event.enqueueWork(() -> {
+            MenuScreens.register(Registration.BUTCHERBLOCK_CONTAINER.get(), ButcherBlockScreen::new);
+
+        });
     }
 }

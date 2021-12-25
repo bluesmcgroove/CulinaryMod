@@ -1,5 +1,6 @@
 package bluesmcgroove;
 
+import bluesmcgroove.setup.ClientSetup;
 import bluesmcgroove.setup.ModSetup;
 import bluesmcgroove.setup.Registration;
 import net.minecraft.world.level.block.Block;
@@ -22,7 +23,7 @@ public class LCB
 {
     public static final String MODID = "lcb";
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public LCB() {
         Registration.init();
@@ -30,11 +31,14 @@ public class LCB
         // Register the setup method for modloading
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(this::setup);
+        // Register the ModSetup method for modloading
         bus.addListener(ModSetup::init);
-        // Register the enqueueIMC method for modloading
-        bus.addListener(this::enqueueIMC);
-        // Register the processIMC method for modloading
-        bus.addListener(this::processIMC);
+        // Register the ClientSetup method for modloading
+        bus.addListener(ClientSetup::setup);
+//        // Register the enqueueIMC method for modloading
+//        bus.addListener(this::enqueueIMC);
+//        // Register the processIMC method for modloading
+//        bus.addListener(this::processIMC);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -44,32 +48,28 @@ public class LCB
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)    {
-        // some example code to dispatch IMC to another mod
         //InterModComms.sendTo("culinarymod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
     }
 
     private void processIMC(final InterModProcessEvent event)    {
-        // some example code to receive and process InterModComms from other mods
 //        LOGGER.info("Got IMC {}", event.getIMCStream().
 //                map(m->m.messageSupplier().get()).
 //                collect(Collectors.toList()));
     }
+
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(final ServerStartingEvent event) {
-        // do something when the server starts
         //LOGGER.info("HELLO from server starting");
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
     // Event bus for receiving Registry Events)
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(modid=LCB.MODID, bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            // register a new block here
-            //ModelLoader.addSpecialModel(new ResourceLocation(MODID, "butcherblock"));
-            //LOGGER.info("HELLO from Register Block");
+            //use Registration class
         }
     }
 }

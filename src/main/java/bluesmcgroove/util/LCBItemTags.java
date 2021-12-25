@@ -1,14 +1,15 @@
-package bluesmcgroove.setup;
+package bluesmcgroove.util;
 
 import bluesmcgroove.LCB;
+import bluesmcgroove.setup.Registration;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
-public class ItemTags extends ItemTagsProvider {
-    public ItemTags(DataGenerator generator, BlockTagsProvider blockTags, @Nullable ExistingFileHelper helper) {
+public class LCBItemTags extends ItemTagsProvider {
+    public LCBItemTags(DataGenerator generator, BlockTagsProvider blockTags, @Nullable ExistingFileHelper helper) {
         super(generator, blockTags, LCB.MODID, helper);
     }
 
