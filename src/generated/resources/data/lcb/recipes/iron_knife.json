@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "culinarymod",
+  "group": "lcb",
   "pattern": [
     "x",
     "s"
@@ -14,6 +14,6 @@
     }
   },
   "result": {
-    "item": "lcb:ironknife"
+    "item": "lcb:iron_knife"
   }
 }

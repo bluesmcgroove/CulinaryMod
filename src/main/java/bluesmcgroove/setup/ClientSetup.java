@@ -17,5 +17,6 @@ public class ClientSetup {
 //        ItemBlockRenderTypes.setRenderLayer(LCBFluids.SALTWATER_BLOCK.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(LCBFluids.SALTWATER_FLUID.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(LCBFluids.SALTWATER_FLOWING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(LCBBlocks.TOMATO_CROP.get(), RenderType.cutout());
     }
 }

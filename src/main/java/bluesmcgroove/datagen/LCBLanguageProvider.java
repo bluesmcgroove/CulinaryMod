@@ -22,6 +22,7 @@ public class LCBLanguageProvider extends LanguageProvider {
         add(SCREEN_BUTCHERBLOCK, "Butcher Block");
         // Blocks
         add(LCBBlocks.BUTCHERBLOCK.get(), "Butcher Block");
+        add(LCBBlocks.TOMATO_CROP.get(), "Tomato Crop");
 
         // Items
 //        add(LCBItems.BUTCHERBLOCK_ITEM.get(), "Butcher Block"); // is this needed?
@@ -29,6 +30,7 @@ public class LCBLanguageProvider extends LanguageProvider {
         add(LCBItems.SALTWATER_BUCKET.get(), "Saltwater Bucket");
         add(LCBItems.TOMATOFRUIT.get(), "Tomato");
         add(LCBItems.TOMATOSLICE.get(), "Sliced Tomato");
+        add(LCBItems.TOMATO_SEEDS.get(), "Tomato Seeds");
 
         // Item hover text
         add("message." + LCBItems.IRONKNIFE.get(), "An iron knife for cooking");

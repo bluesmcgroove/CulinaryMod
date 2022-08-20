@@ -28,11 +28,11 @@ public class LCBRecipes extends RecipeProvider {
                 .pattern("s")
                 .define('x', Tags.Items.INGOTS_IRON)
                 .define('s', Items.STICK)
-                .group("culinarymod")
+                .group("lcb")
                 .unlockedBy("iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STICK))
                 .save(consumer);
         ShapelessRecipeBuilder.shapeless(LCBItems.TOMATOSLICE.get())
-                .group("culinarymod")
+                .group("lcb")
                 .requires(LCBItems.IRONKNIFE.get())
                 .requires(LCBItems.TOMATOFRUIT.get())
                 .unlockedBy("ironknife", InventoryChangeTrigger.TriggerInstance.hasItems(LCBItems.IRONKNIFE.get()))
