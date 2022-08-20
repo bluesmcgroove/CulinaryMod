@@ -1,10 +1,12 @@
 {
   "block.lcb.butcherblock": "Butcher Block",
-  "item.lcb.ironknife": "Iron Knife",
+  "block.lcb.tomato_crop": "Tomato Crop",
+  "item.lcb.iron_knife": "Iron Knife",
   "item.lcb.saltwater_bucket": "Saltwater Bucket",
-  "item.lcb.tomatofruit": "Tomato",
-  "item.lcb.tomatoslice": "Sliced Tomato",
+  "item.lcb.tomato_fruit": "Tomato",
+  "item.lcb.tomato_seeds": "Tomato Seeds",
+  "item.lcb.tomato_slice": "Sliced Tomato",
   "itemGroup.lcb": "Le Cordon Blues",
-  "message.ironknife": "An iron knife for cooking",
+  "message.iron_knife": "An iron knife for cooking",
   "screen.lcb.butcherblock": "Butcher Block"
 }

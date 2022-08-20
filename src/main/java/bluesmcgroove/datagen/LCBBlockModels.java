@@ -14,5 +14,6 @@ public class LCBBlockModels extends BlockModelProvider {
     public void registerModels(){
         //register block models here for generation
 
+
     }
 }
