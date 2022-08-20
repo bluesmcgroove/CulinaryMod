@@ -1,5 +1,6 @@
 package bluesmcgroove.datagen;
 
+import bluesmcgroove.setup.LCBItems;
 import bluesmcgroove.setup.Registration;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
@@ -8,20 +9,21 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 
 
 import java.util.function.Consumer;
 
-public class Recipes extends RecipeProvider {
+public class LCBRecipes extends RecipeProvider {
 
-    public Recipes(DataGenerator generatorIn) {
+    public LCBRecipes(DataGenerator generatorIn) {
         super(generatorIn);
     }
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
-        ShapedRecipeBuilder.shaped(Registration.IRONKNIFE.get())
+        ShapedRecipeBuilder.shaped(LCBItems.IRONKNIFE.get())
                 .pattern("x")
                 .pattern("s")
                 .define('x', Tags.Items.INGOTS_IRON)
@@ -29,11 +31,11 @@ public class Recipes extends RecipeProvider {
                 .group("culinarymod")
                 .unlockedBy("iron", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STICK))
                 .save(consumer);
-        ShapelessRecipeBuilder.shapeless(Registration.TOMATOSLICE.get())
+        ShapelessRecipeBuilder.shapeless(LCBItems.TOMATOSLICE.get())
                 .group("culinarymod")
-                .requires(Registration.IRONKNIFE.get())
-                .requires(Registration.TOMATOFRUIT.get())
-                .unlockedBy("ironknife", InventoryChangeTrigger.TriggerInstance.hasItems(Registration.IRONKNIFE.get()))
+                .requires(LCBItems.IRONKNIFE.get())
+                .requires(LCBItems.TOMATOFRUIT.get())
+                .unlockedBy("ironknife", InventoryChangeTrigger.TriggerInstance.hasItems(LCBItems.IRONKNIFE.get()))
                 .save(consumer);
     }
 }

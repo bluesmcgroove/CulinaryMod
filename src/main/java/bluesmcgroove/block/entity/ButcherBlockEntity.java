@@ -1,9 +1,11 @@
 package bluesmcgroove.block.entity;
 
+import bluesmcgroove.setup.LCBBlocks;
 import bluesmcgroove.setup.Registration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtUtils;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,7 +25,7 @@ public class ButcherBlockEntity extends BlockEntity {
     private final LazyOptional<IItemHandler> handler = LazyOptional.of(() -> itemHandler);
 
     public ButcherBlockEntity(BlockPos pos, BlockState state) {
-        super(Registration.BUTCHERBLOCK_ENTITY.get(), pos, state);
+        super(LCBBlocks.BUTCHERBLOCK_ENTITY.get(), pos, state);
     }
 
     @Override
@@ -39,9 +41,8 @@ public class ButcherBlockEntity extends BlockEntity {
     }
 
     @Override
-    public CompoundTag save(CompoundTag tag) {
+    public void saveAdditional(CompoundTag tag) {
         tag.put("inv", itemHandler.serializeNBT());
-        return super.save(tag);
     }
 
     private ItemStackHandler createHandler() {

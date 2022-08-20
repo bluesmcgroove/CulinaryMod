@@ -30,6 +30,9 @@ import javax.annotation.Nullable;
 
 public class ButcherBlock extends Block implements EntityBlock {
 
+    public static final String MESSAGE_BUTCHERBLOCK = "message.butcherblock";
+    public static final String SCREEN_BUTCHERBLOCK = "screen.lcb.butcherblock";
+
     public ButcherBlock() {
 
         super(Properties.of(Material.WOOD)

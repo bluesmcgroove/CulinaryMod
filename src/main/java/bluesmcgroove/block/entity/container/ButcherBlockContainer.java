@@ -1,5 +1,6 @@
 package bluesmcgroove.block.entity.container;
 
+import bluesmcgroove.setup.LCBBlocks;
 import bluesmcgroove.setup.Registration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Inventory;
@@ -19,12 +20,12 @@ import org.lwjgl.system.CallbackI;
 
 public class ButcherBlockContainer extends AbstractContainerMenu {
 
-    private BlockEntity blockEntity;
-    private Player playerEntity;
-    private IItemHandler playerInventory;
+    private final BlockEntity blockEntity;
+    private final Player playerEntity;
+    private final IItemHandler playerInventory;
 
     public ButcherBlockContainer(int windowId, Level world, BlockPos pos, Inventory playerInventory, Player player){
-        super(Registration.BUTCHERBLOCK_CONTAINER.get(), windowId);
+        super(LCBBlocks.BUTCHERBLOCK_CONTAINER.get(), windowId);
         blockEntity = world.getBlockEntity(pos);
         this.playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
@@ -39,7 +40,7 @@ public class ButcherBlockContainer extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player playerIn) {
-        return stillValid(ContainerLevelAccess.create(blockEntity.getLevel(), blockEntity.getBlockPos()), playerEntity, Registration.BUTCHERBLOCK.get());
+        return stillValid(ContainerLevelAccess.create(blockEntity.getLevel(), blockEntity.getBlockPos()), playerEntity, LCBBlocks.BUTCHERBLOCK.get());
     }
 
     @Override

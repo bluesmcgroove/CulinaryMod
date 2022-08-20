@@ -1,13 +1,12 @@
 package bluesmcgroove.datagen;
 
 import bluesmcgroove.LCB;
-import bluesmcgroove.util.LCBBlockTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
-@Mod.EventBusSubscriber(modid = LCB.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = LCB.ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
 
     @SubscribeEvent
@@ -15,13 +14,14 @@ public class DataGenerators {
         DataGenerator generator = event.getGenerator();
 
         if (event.includeServer()) {
-            generator.addProvider(new Recipes(generator));
-            generator.addProvider(new LootTables(generator));
-            generator.addProvider(new LCBBlockTags(generator, event.getExistingFileHelper()));
+            generator.addProvider(new LCBRecipes(generator));
+            generator.addProvider(new LCBLootTables(generator));
+            generator.addProvider(new LCBBlockTagsProvider(generator, event.getExistingFileHelper()));
         }
 
         if (event.includeClient()) {
-            generator.addProvider(new Items(generator, event.getExistingFileHelper()));
+            generator.addProvider(new LCBItemModels(generator, event.getExistingFileHelper()));
+            generator.addProvider(new LCBLanguageProvider(generator, "en_us"));
         }
     }
 }

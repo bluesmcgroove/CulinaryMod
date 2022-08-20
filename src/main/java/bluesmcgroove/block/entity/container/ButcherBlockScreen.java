@@ -12,7 +12,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class ButcherBlockScreen extends AbstractContainerScreen<ButcherBlockContainer> {
 
-    private ResourceLocation GUI = new ResourceLocation(LCB.MODID, "textures/gui/butcherblock_gui.png");
+    private final ResourceLocation GUI = new ResourceLocation(LCB.ID, "textures/gui/butcherblock_gui.png");
 
     public ButcherBlockScreen(ButcherBlockContainer container, Inventory inv, Component name) {
         super(container, inv, name);

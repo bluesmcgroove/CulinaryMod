@@ -10,9 +10,10 @@ public class ModSetup {
     public static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(TAB_NAME) {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(Registration.IRONKNIFE.get());
+            return new ItemStack(LCBItems.IRONKNIFE.get());
         }
     };
+
     public static void init(final FMLCommonSetupEvent event) {
 
     }

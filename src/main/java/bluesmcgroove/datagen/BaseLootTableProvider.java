@@ -1,4 +1,5 @@
 package bluesmcgroove.datagen;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import net.minecraft.advancements.critereon.EnchantmentPredicate;
@@ -115,6 +116,6 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
 
     @Override
     public String getName() {
-        return "Le Cordon Blues LootTables";
+        return "Le Cordon Blues LCBLootTables";
     }
 }

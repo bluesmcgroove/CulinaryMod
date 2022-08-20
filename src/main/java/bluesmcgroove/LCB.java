@@ -1,8 +1,6 @@
 package bluesmcgroove;
 
-import bluesmcgroove.setup.ClientSetup;
-import bluesmcgroove.setup.ModSetup;
-import bluesmcgroove.setup.Registration;
+import bluesmcgroove.setup.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -18,44 +16,44 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(LCB.MODID)
+@Mod(LCB.ID)
 public class LCB
 {
-    public static final String MODID = "lcb";
+    public static final String ID = "lcb";
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger();
 
     public LCB() {
-        Registration.init();
+        IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+
+        LCBItems.register(modBus);
+        LCBBlocks.register(modBus);
+        LCBFluids.register(modBus);
 
         // Register the setup method for modloading
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        bus.addListener(this::setup);
-        // Register the ModSetup method for modloading
-        bus.addListener(ModSetup::init);
-        // Register the ClientSetup method for modloading
-        bus.addListener(ClientSetup::setup);
-//        // Register the enqueueIMC method for modloading
-//        bus.addListener(this::enqueueIMC);
-//        // Register the processIMC method for modloading
-//        bus.addListener(this::processIMC);
 
-        // Register ourselves for server and other game events we are interested in
+        modBus.addListener(this::setup);
+        // Register the ModSetup method for modloading
+        modBus.addListener(ModSetup::init);
+        // Register the ClientSetup method for modloading
+        modBus.addListener(ClientSetup::setup);
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event)    {
     }
 
-    private void enqueueIMC(final InterModEnqueueEvent event)    {
-        //InterModComms.sendTo("culinarymod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
-    }
-
-    private void processIMC(final InterModProcessEvent event)    {
+//    private void enqueueIMC(final InterModEnqueueEvent event)    {
+//        InterModComms.sendTo("culinarymod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
+//    }
+//
+//    private void processIMC(final InterModProcessEvent event)    {
 //        LOGGER.info("Got IMC {}", event.getIMCStream().
 //                map(m->m.messageSupplier().get()).
 //                collect(Collectors.toList()));
-    }
+//    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
@@ -65,7 +63,7 @@ public class LCB
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
     // Event bus for receiving Registry Events)
-    @Mod.EventBusSubscriber(modid=LCB.MODID, bus=Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(modid=LCB.ID, bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
