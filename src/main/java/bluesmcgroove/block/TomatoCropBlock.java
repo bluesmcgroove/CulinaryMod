@@ -26,6 +26,10 @@ public class TomatoCropBlock extends CropBlock {
         return LCBItems.TOMATO_SEEDS.get();
     }
 
+    public IntegerProperty getAgeProperty() {
+        return AGE;
+    }
+
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(AGE);
     }

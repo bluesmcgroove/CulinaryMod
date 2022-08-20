@@ -1,6 +1,15 @@
 a8859683a3e5fb47ef2aea51c82385b59e04bc20 assets/lcb/blockstates/saltwater.json
+e8d0bb4dbb13f99b2b3c984115340538382fb442 assets/lcb/blockstates/tomato_crop.json
 72caa22788515d68927c3ea846e4dc14495cbbe3 assets/lcb/lang/en_us.json
 218b30c8839cba98f72b338c16d66203cd79fffb assets/lcb/models/block/saltwater_fluid.json
+32eb2c269e469b7e3385c6d2ffff50a9ed5549eb assets/lcb/models/block/tomato_crop_stage0.json
+f359a0b2f3ea6dc662e5530fb83c9dfd89599f3f assets/lcb/models/block/tomato_crop_stage1.json
+007a1fd509c088f0e7e737023800ded516fb5056 assets/lcb/models/block/tomato_crop_stage2.json
+7c930aba6a5eae1ab4b7cd25f85eb7f9e1d11a5c assets/lcb/models/block/tomato_crop_stage3.json
+865b2cb0c6483f48d2b7fb41b71ec8692fe4ac93 assets/lcb/models/block/tomato_crop_stage4.json
+23bae75ce94d3b0cae4adfdf1bcef7fd8348b69a assets/lcb/models/block/tomato_crop_stage5.json
+a98c8119231be04aff12cf932f7f8d1ddacd4ecd assets/lcb/models/block/tomato_crop_stage6.json
+2833b488ce8ed2127a355f3bece77aa3479ae25a assets/lcb/models/block/tomato_crop_stage7.json
 d7eb57d741c4c4b114577285e91d4d6234da005c assets/lcb/models/item/iron_knife.json
 b4970d9732e8eee9d26ed0e9a83cf52346123a6d assets/lcb/models/item/saltwater_bucket.json
 f687bcd57b94c75d2d9cf1d9a16d06c9de946d8f assets/lcb/models/item/tomato_fruit.json
@@ -8,7 +17,8 @@ f687bcd57b94c75d2d9cf1d9a16d06c9de946d8f assets/lcb/models/item/tomato_fruit.jso
 9b0cd503583d8abaabf8c8df67dafdd83a182a40 assets/lcb/models/item/tomato_slice.json
 8f354c1294a9b212fcd2ed580f0d06223a263928 data/lcb/advancements/recipes/lcb/iron_knife.json
 1fafd5c10c0c788681e589c1862f4dbc5efd252e data/lcb/advancements/recipes/lcb/tomato_slice.json
-879351be86bc7931a7022b08433412ccf2af036e data/lcb/loot_tables/blocks/butcherblock.json
+28e6c1c618f51cbfef75952eab245d3511eb3f79 data/lcb/loot_tables/blocks/butcherblock.json
+40d7e1781a3093e4c44498ae0ac6657aa8dae081 data/lcb/loot_tables/blocks/tomato_crop.json
 b5f8502e3e2c9436bf4eee1235ac7d09de46fdf9 data/lcb/recipes/iron_knife.json
 d089f044afe7fc405f69ecdcc0ab135f02023855 data/lcb/recipes/tomato_slice.json
 be97d13f86e816262461ee4e57435f3ada2c4776 data/minecraft/tags/blocks/mineable/axe.json
