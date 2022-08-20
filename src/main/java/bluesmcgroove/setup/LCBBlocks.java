@@ -1,12 +1,14 @@
 package bluesmcgroove.setup;
 
 import bluesmcgroove.block.ButcherBlock;
+import bluesmcgroove.block.SaltWaterBlock;
 import bluesmcgroove.block.entity.ButcherBlockEntity;
 import bluesmcgroove.block.entity.container.ButcherBlockContainer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -35,6 +37,10 @@ public class LCBBlocks {
                 Level world = inv.player.getCommandSenderWorld();
                 return new ButcherBlockContainer(windowId, world, pos, inv, inv.player);
             }));
+
+    // Fluid Blocks
+    public static final RegistryObject<LiquidBlock> SALTWATER = BLOCKS.register("saltwater", SaltWaterBlock::new);
+
     public static void register(IEventBus bus) {
         BLOCKS.register(bus);
         BLOCKENTITIES.register(bus);

@@ -1,4 +1,6 @@
+a8859683a3e5fb47ef2aea51c82385b59e04bc20 assets/lcb/blockstates/saltwater.json
 9ddf455d4783a561e22d699f3003f7fe071ffebf assets/lcb/lang/en_us.json
+218b30c8839cba98f72b338c16d66203cd79fffb assets/lcb/models/block/saltwater_fluid.json
 f74123197401fd836f86886f4469e26ea1f1f621 assets/lcb/models/item/ironknife.json
 b4970d9732e8eee9d26ed0e9a83cf52346123a6d assets/lcb/models/item/saltwater_bucket.json
 9f7a4496f4f778ba36aa7f05c38bffa6c622b152 assets/lcb/models/item/tomatofruit.json
@@ -10,3 +12,4 @@ b869d713e9911ce730d17f43aca959e23be421f1 data/lcb/advancements/recipes/lcb/ironk
 c59b575d11ec1ebdac7f0de8f7010750d5eca9ee data/lcb/recipes/tomatoslice.json
 be97d13f86e816262461ee4e57435f3ada2c4776 data/minecraft/tags/blocks/mineable/axe.json
 be97d13f86e816262461ee4e57435f3ada2c4776 data/minecraft/tags/blocks/needs_stone_tool.json
+3ac7c271912956f9201e2a930d5e413a21725cec data/minecraft/tags/fluids/water.json

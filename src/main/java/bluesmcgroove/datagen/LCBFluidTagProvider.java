@@ -1,8 +1,10 @@
 package bluesmcgroove.datagen;
 
 import bluesmcgroove.LCB;
+import bluesmcgroove.setup.LCBFluids;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.FluidTagsProvider;
+import net.minecraft.tags.FluidTags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class LCBFluidTagProvider extends FluidTagsProvider {
@@ -13,7 +15,8 @@ public class LCBFluidTagProvider extends FluidTagsProvider {
 
     @Override
     public void addTags() {
-
+        tag(FluidTags.WATER).add(LCBFluids.SALTWATER_FLUID.get());
+        tag(FluidTags.WATER).add(LCBFluids.SALTWATER_FLOWING.get());
     }
 
     @Override

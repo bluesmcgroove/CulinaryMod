@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "lcb:saltwater_fluid",
+    "lcb:saltwater_flowing"
+  ]
+}
